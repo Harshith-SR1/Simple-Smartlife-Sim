@@ -1,8 +1,7 @@
 import os
-import importlib
 from typing import Any, Dict, List, Optional
 
-OpenAI = importlib.import_module("openai").OpenAI
+from openai import OpenAI
 
 from environment.env import SmartLifeSimEnv
 from grader.grader import TASKS, grade_performance
@@ -156,7 +155,9 @@ def run_episode(max_steps: int = MAX_STEPS, task_name: str = TASK_NAME) -> None:
             reward = float(result.get("reward", 0.0) or 0.0)
             done = bool(result.get("done", False))
             info = result.get("info") or {}
-            error = info.get("error") if isinstance(info, dict) else None
+            error = None
+            if isinstance(info, dict):
+                error = info.get("last_action_error") or info.get("error")
 
             rewards.append(reward)
             steps_taken = step
@@ -178,6 +179,12 @@ def run_episode(max_steps: int = MAX_STEPS, task_name: str = TASK_NAME) -> None:
         success = False
         score = 0.0
     finally:
+        close_fn = getattr(env, "close", None)
+        if callable(close_fn):
+            try:
+                close_fn()
+            except Exception:
+                pass
         log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
 
 
@@ -198,8 +205,5 @@ def state():
 
 
 if __name__ == "__main__":
-    # Champion update: Run all three tasks in sequence to demonstrate full capability
-    tasks_to_run = ["daily_survival", "career_growth", "agri_sustainability"]
-    for task in tasks_to_run:
-        print(f"\n--- Running Task: {task} ---")
+    for task in ["daily_survival", "career_growth", "agri_sustainability"]:
         run_episode(task_name=task)
