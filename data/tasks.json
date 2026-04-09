@@ -1,31 +1,37 @@
 {
   "easy": {
     "id": 1,
+    "task_id": "daily_survival",
     "name": "Maintain Health and Energy",
     "objective": "Keep health and energy stable throughout the day.",
     "success_criteria": [
       "health >= 0.7",
       "energy >= 0.6"
-    ]
+    ],
+    "grader": true
   },
   "medium": {
     "id": 2,
+    "task_id": "career_growth",
     "name": "Balance Work and Health",
     "objective": "Grow money and productivity without sacrificing wellbeing.",
     "success_criteria": [
       "money >= 1200",
       "health >= 0.7",
       "productivity >= 0.6"
-    ]
+    ],
+    "grader": true
   },
   "hard": {
     "id": 3,
+    "task_id": "agri_sustainability",
     "name": "Optimize Career, Agriculture, and Health",
     "objective": "Increase salary growth, harvest farm value, and preserve health.",
     "success_criteria": [
       "salary_growth >= 0.4",
       "expected_agri_income >= 20",
       "health >= 0.7"
-    ]
+    ],
+    "grader": true
   }
 }
