@@ -39,8 +39,10 @@ The agent represents a digital twin living in a mixed urban-rural ecosystem:
 * Office: productivity and income actions
 * Hospital: healthcare and risk mitigation actions
 * Village/Farm: planting, watering, harvesting, and rural workload management
+  
 
-This models real-world multi-objective planning under resource constraints, not a game loop.
+This models real-world multi-objective planning under r<img width="1915" height="841" alt="Screenshot 2026-04-09 122754" src="https://github.com/user-attachments/assets/16d0af0f-7ab7-406d-bcfe-0be77423b15e" />
+esource constraints, not a game loop.
 
 OpenEnv API Contract
 
