@@ -1,0 +1,35 @@
+name: smartlifesim
+description: "SmartLifeSim: AI Digital Twin for Real-World Life Decision Simulation"
+version: "0.1.0"
+tags:
+  - openenv
+  - life-simulation
+  - real-world
+
+tasks:
+  - id: daily_survival
+    name: "Daily Survival"
+    description: "Maintain health > 0.7, energy > 0.6, and stress < 0.4"
+    difficulty: easy
+    grader: true
+
+  - id: career_growth
+    name: "Corporate Ladder"
+    description: "Grow bank balance to Rs 1500+ while keeping stress below 0.6"
+    difficulty: medium
+    grader: true
+
+  - id: agri_sustainability
+    name: "Green Economy"
+    description: "Complete full crop cycle (stage 4+) and accumulate Rs 2000+"
+    difficulty: hard
+    grader: true
+
+inference:
+  runtime: python3.10
+  handler: inference.py
+  parameters:
+    HF_TOKEN: ${HF_TOKEN}
+    API_BASE_URL: ${API_BASE_URL}
+    MODEL_NAME: ${MODEL_NAME}
+    LOCAL_IMAGE_NAME: ${LOCAL_IMAGE_NAME}

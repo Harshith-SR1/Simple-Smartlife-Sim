@@ -1,0 +1,31 @@
+{
+  "easy": {
+    "id": 1,
+    "name": "Maintain Health and Energy",
+    "objective": "Keep health and energy stable throughout the day.",
+    "success_criteria": [
+      "health >= 0.7",
+      "energy >= 0.6"
+    ]
+  },
+  "medium": {
+    "id": 2,
+    "name": "Balance Work and Health",
+    "objective": "Grow money and productivity without sacrificing wellbeing.",
+    "success_criteria": [
+      "money >= 1200",
+      "health >= 0.7",
+      "productivity >= 0.6"
+    ]
+  },
+  "hard": {
+    "id": 3,
+    "name": "Optimize Career, Agriculture, and Health",
+    "objective": "Increase salary growth, harvest farm value, and preserve health.",
+    "success_criteria": [
+      "salary_growth >= 0.4",
+      "expected_agri_income >= 20",
+      "health >= 0.7"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "baseline": 0.5,
+  "weights": {
+    "productivity": 0.2,
+    "health": 0.2,
+    "energy": 0.1,
+    "finance": 0.2,
+    "agriculture": 0.1,
+    "salary_growth": 0.2
+  }
+}
