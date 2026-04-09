@@ -41,8 +41,8 @@ The agent represents a digital twin living in a mixed urban-rural ecosystem:
 * Village/Farm: planting, watering, harvesting, and rural workload management
   
 
-This models real-world multi-objective planning under r<img width="1915" height="841" alt="Screenshot 2026-04-09 122754" src="https://github.com/user-attachments/assets/16d0af0f-7ab7-406d-bcfe-0be77423b15e" />
-esource constraints, not a game loop.
+<img width="1915" height="841" alt="Screenshot 2026-04-09 122754" src="https://github.com/user-attachments/assets/16d0af0f-7ab7-406d-bcfe-0be77423b15e" />
+This models real-world multi-objective planning under resource constraints, not a game loop.
 
 OpenEnv API Contract
 
@@ -99,6 +99,8 @@ Global RL action set
 * Office: work, meeting, deadline_task
 * Hospital: treatment, consult, rest_hospital
 * Village/Farm: harvest, plant, water, farm_rest
+  
+<img width="625" height="606" alt="Screenshot 2026-04-09 122812" src="https://github.com/user-attachments/assets/8e7933de-5295-49ad-ae91-684b99c00586" />
 
 Compatibility actions
 
@@ -155,6 +157,8 @@ SmartLifeSim includes RL-based decision scoring and transparent rationale output
 * suggestions including alternative action and condition-specific hints
 
 This allows clear auditability of why an action was selected.
+
+<img width="656" height="780" alt="Screenshot 2026-04-09 122823" src="https://github.com/user-attachments/assets/76c668dc-5019-43c0-b195-dee64753ea19" />
 
 Frontend Capabilities
 
